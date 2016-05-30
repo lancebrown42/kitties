@@ -1,0 +1,35 @@
+/*@import a Google Font here!*/
+
+body {
+	background-image: url(../images/background.png)
+
+}
+
+#container {
+
+}
+
+.dashed {
+	text-align: center;
+
+}
+
+.left-container, .right-container {
+	background: rgba(230, 232, 214, .7);
+	border: 2px, solid #eee;
+	border-radius: 8px;
+}
+
+h1 {
+	
+}
+.left-container {
+	float: left;
+}
+.right-container {
+	float: right;
+}
+
+img {
+	border-radius: 8px;
+}

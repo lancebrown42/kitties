@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html ng-app="kittiesApp">
+	<head>
+
+		<title>Kitties App!</title>
+
+
+		<link rel="stylesheet" href="css/style.css">
+
+
+	</head>
+
+	<body>
+	<div id="container" ng-controller="KittiesController as kitties">
+		<div class="left-container">
+			<h1>Kitties for Adoption</h1>
+			<div class="dashed" ng-repeat="k in kitties.kittiesList | filter: k.adopted = false">
+				<h2>My name is</h2>
+				<p>{{ k.catName}}</p>
+				<img ng-src="{{k.image}}">
+				<p>I am a {{ k.gender}}.</p>
+				<p>Adopt me?<input type="checkbox" ng-model="k.adopted"></p>
+
+				<!-- <p>{{k.adopted}} </p> -->
+			</div>
+
+		</div>
+		<div class ="right-container">
+			<h1>Kitties Adopted!</h1>
+				<div class="dashed" ng-repeat="k in kitties.kittiesList | filter: k.adopted = true">
+				<h2>My name is</h2>
+				<p>{{ k.catName}}.</p>
+				<img ng-src="{{k.image}}">
+				
+					<!-- <p>Adopt me?<input type="checkbox" ng-model="k.adopted"></p> -->
+					<!-- <p>{{k.adopted}} </p> -->
+				</div>
+			
+
+		</div>
+
+
+	</div>
+
+    		<!--Sourcing Angular-->
+		<!-- Source in module -->
+
+		<!-- Source in controller -->
+
+	<script type="text/javascript" charset="utf-8" src="js/angular.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/KittiesController.js"></script>
+	</body>
+</html>
